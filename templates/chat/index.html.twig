@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Chat Application{% endblock %}
+
+{% block body %}
+<h1>Chat</h1>
+
+{% if json %}
+<div class="chatWindow">
+  {% for message in json['messages'] %}
+  <div class="message m-3">
+    <div class="row">
+      {% if message['type'] is same as('bot') %}
+      <div class="bubble bubble--bot col-6">
+        <p>Bot:</p>
+        <p>{{ message['msg'] }}</p>
+      </div>
+      {% endif %}
+      {% if message['type'] is same as ('user') %}
+      <div class="bubble bubble--user col-6 offset-6">
+        <p>User:</p>
+        <p>{{ message['msg'] }}</p>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% else %}
+<p>No messages to display.</p>
+{% endif %}
+
+{{ include('inc/input.html.twig') }}
+
+{% endblock %}
