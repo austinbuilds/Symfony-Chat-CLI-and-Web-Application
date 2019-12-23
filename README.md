@@ -37,6 +37,12 @@ Browse to http://localhost:8000/
 
 Quit with ctrl-c
 
+Console:
+
+```console
+php bin/console write:message "This is a message to the application"
+```
+
 ## :computer: Technologies Demonstrated
 
 - HTML
