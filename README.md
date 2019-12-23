@@ -15,7 +15,7 @@ Dependencies:
 
 Recommeneded:
 
-```console
+```sh
 composer create-project symfony/website-skeleton my_project_name
 composer require symfony/console
 composer require symfony/filesystem
@@ -29,7 +29,7 @@ Run:
 
 In project dir
 
-```console
+```sh
 php -S 127.0.0.1:8000 -t public
 ```
 
@@ -39,7 +39,7 @@ Quit with ctrl-c
 
 Console:
 
-```console
+```sh
 php bin/console write:message "This is a message to the application"
 ```
 
