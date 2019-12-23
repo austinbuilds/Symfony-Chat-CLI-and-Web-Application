@@ -2,21 +2,16 @@
 
 Symfony CLI and web application with chat functionality. Can be used to send incoming messages as a "chat bot" from the CLI and replied to with outgoing messages as the "user" from the web application. Communications are persisted in `.json` files: `incoming.json`, `outgoing.json`, and `conversation.json`.
 
-<br>
-<hr>
-<br>
-
 ## :floppy_disk: Install
 
 Dependencies:
 
-* [composer](https://getcomposer.org)
-* [symfony](https://symfony.com)
-* symfony/console
-* symfony/filesystem
-* annotations
-* twig
-
+- [composer](https://getcomposer.org)
+- [symfony](https://symfony.com)
+- symfony/console
+- symfony/filesystem
+- annotations
+- twig
 
 Recommeneded:
 
@@ -30,19 +25,17 @@ composer require twig
 
 :pushpin: Depending on method, if composer.phar is not globally installed and placed in project root folder, use: `php composer.phar create-project symfony/website-skeleton my_project_name`
 
-
 Run:
 
 In project dir
+
 ```console
 php -S 127.0.0.1:8000 -t public
 ```
-Browse to http://localhost:8000/
-Quit with ctrl-c
 
-<br>
-<hr>
-<br>
+Browse to http://localhost:8000/
+
+Quit with ctrl-c
 
 ## :computer: Technologies Demonstrated
 
@@ -57,10 +50,6 @@ Quit with ctrl-c
 - Composer
 - JSON
 
-<br>
-<hr>
-<br>
-
 ## :memo: Notes
 
 ### Routes
@@ -68,6 +57,7 @@ Quit with ctrl-c
 Routes.yaml or annotations
 
 > NamedController.php
+
 ```php
 /**
  * @Route("/", name="home", methods={"GET"})
@@ -120,18 +110,14 @@ public function addMessage(Request $request) {
 ```html
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Welcome to Symfony!</title>
-    </head>
-    <body>
-        <h1>{{ page_title }}</h1>
+  <head>
+    <title>Welcome to Symfony!</title>
+  </head>
+  <body>
+    <h1>{{ page_title }}</h1>
 
-        {% if user.isLoggedIn %}
-            Hello {{ user.name }}!
-        {% endif %}
-
-        {# ... #}
-    </body>
+    {% if user.isLoggedIn %} Hello {{ user.name }}! {% endif %} {# ... #}
+  </body>
 </html>
 ```
 
@@ -139,7 +125,7 @@ public function addMessage(Request $request) {
 
 ### JSON & Data
 
-ChatController.php
+> ChatController.php
 
 :pushpin: Data is imported from the public folder at './'
 
@@ -176,9 +162,10 @@ Working with data in Twig template:
 <hr>
 
 ### Services
->Your application is full of useful objects: a "Mailer" object might help you send emails while another object might help you save things to the database. Almost everything that your app "does" is actually done by one of these objects. And each time you install a new bundle, you get access to even more!
 
->In Symfony, these useful objects are called services and each service lives inside a very special object called the service container. The container allows you to centralize the way objects are constructed. It makes your life easier, promotes a strong architecture and is super fast!
+> Your application is full of useful objects: a "Mailer" object might help you send emails while another object might help you save things to the database. Almost everything that your app "does" is actually done by one of these objects. And each time you install a new bundle, you get access to even more!
+
+> In Symfony, these useful objects are called services and each service lives inside a very special object called the service container. The container allows you to centralize the way objects are constructed. It makes your life easier, promotes a strong architecture and is super fast!
 
 Read more about [services](https://symfony.com/doc/current/service_container.html).
 
@@ -220,7 +207,7 @@ echo MessageGenerator::getHappyMessage();
 
 ### Console
 
->The Console component allows you to create command-line commands. Your console commands can be used for any recurring task, such as cronjobs, imports, or other batch jobs.
+> The Console component allows you to create command-line commands. Your console commands can be used for any recurring task, such as cronjobs, imports, or other batch jobs.
 
 Read more about the [console](https://symfony.com/doc/current/console.html);
 
@@ -255,10 +242,6 @@ class CreateUserCommand extends Command
 }
 ```
 
-<br>
-<hr>
-<br>
-
 ## :man_technologist: Author
 
-* **Austin** - [austinbuilds](https://github.com/austinbuilds)
+- **Austin** - [austinbuilds](https://github.com/austinbuilds)
